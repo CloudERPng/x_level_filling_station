@@ -1,0 +1,35 @@
+{
+ "cards": [
+  {
+   "hidden": 0,
+   "label": "Filling Station",
+   "links": "[\n    {\n        \"label\": \"Meter Reading\",\n        \"name\": \"Meter Reading\",\n        \"onboard\": 1,\n        \"type\": \"doctype\",\n        \"dependencies\": [\n            \"Meter\",\n            \"Filling Station\"\n        ]\n    },\n    {\n        \"label\": \"Sales Entry\",\n        \"name\": \"Sales Entry\",\n        \"onboard\": 1,\n        \"type\": \"doctype\",\n        \"dependencies\": [\n            \"Meter Reading\"\n        ]\n    }\n]"
+  },
+  {
+   "hidden": 0,
+   "label": "Setup",
+   "links": "[   \n    {\n        \"label\": \"Filling Station\",\n        \"name\": \"Filling Station\",\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Fuel Tank\",\n        \"name\": \"Fuel Tank\",\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Meter\",\n        \"name\": \"Meter\",\n        \"type\": \"doctype\"\n    }\n]"
+  }
+ ],
+ "cards_label": "Master & Records",
+ "category": "Modules",
+ "charts": [],
+ "creation": "2020-12-22 02:42:43.305692",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Desk Page",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_standard": 1,
+ "label": "Filling Station",
+ "modified": "2020-12-22 02:47:20.899892",
+ "modified_by": "Administrator",
+ "module": "Xlevel Filling Station",
+ "name": "Filling Station",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": []
+}

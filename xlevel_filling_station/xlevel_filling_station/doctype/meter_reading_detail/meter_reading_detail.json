@@ -1,0 +1,127 @@
+{
+ "creation": "2020-12-11 18:18:05.585081",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meter",
+  "column_break_2",
+  "item_code",
+  "item_name",
+  "section_break_2",
+  "qty",
+  "new_qty",
+  "column_break_5",
+  "rate",
+  "section_break_7",
+  "sales_revenue",
+  "column_break_9",
+  "actual_total_revenue"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "meter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Meter",
+   "options": "Meter",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "new_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "New Qty",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "default": "0",
+   "fieldname": "sales_revenue",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Sales Revenue",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "default": "0",
+   "fieldname": "actual_total_revenue",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Actual total revenue ",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "meter.item_code",
+   "fetch_if_empty": 1,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "meter.item_name",
+   "fetch_if_empty": 1,
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-12-25 03:37:11.083236",
+ "modified_by": "Administrator",
+ "module": "Xlevel Filling Station",
+ "name": "Meter Reading Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

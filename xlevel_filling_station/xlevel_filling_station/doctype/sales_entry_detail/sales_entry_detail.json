@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "creation": "2020-12-14 16:32:20.192280",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meter",
+  "section_break_2",
+  "item_code",
+  "column_break_4",
+  "item_name",
+  "section_break_6",
+  "qty",
+  "new_qty",
+  "column_break_9",
+  "rate",
+  "section_break_11",
+  "amount",
+  "column_break_13",
+  "actual_amount",
+  "references_section",
+  "meter_reading",
+  "meter_reading_detail"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "meter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Meter",
+   "options": "Meter",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rate",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "actual_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Actual Amount",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "meter.item_code",
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "new_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "New Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "meter_reading",
+   "fieldtype": "Link",
+   "label": "Meter Reading",
+   "options": "Meter Reading",
+   "read_only": 1
+  },
+  {
+   "fieldname": "meter_reading_detail",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Meter Reading Detail",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-12-22 04:03:36.001589",
+ "modified_by": "Administrator",
+ "module": "Xlevel Filling Station",
+ "name": "Sales Entry Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

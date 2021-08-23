@@ -1,0 +1,145 @@
+{
+ "creation": "2020-12-14 16:36:39.607879",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fuel_tank",
+  "column_break_2",
+  "item_code",
+  "item_name",
+  "section_break_5",
+  "rate",
+  "section_break_2",
+  "amount",
+  "section_break_9",
+  "opening_qty",
+  "column_break_5",
+  "qty_via_meter",
+  "section_break_7",
+  "expected_closing_qty",
+  "actual_qty",
+  "column_break_10",
+  "difference"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "expected_closing_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Expected Closing Qty",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "actual_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Actual Qty"
+  },
+  {
+   "columns": 1,
+   "fieldname": "difference",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Difference",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "qty_via_meter",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty Via Meter",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "opening_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Opening Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "fuel_tank",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fuel Tank",
+   "options": "Fuel Tank",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "fuel_tank.item_code",
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "fuel_tank.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-12-25 05:12:02.299109",
+ "modified_by": "Administrator",
+ "module": "Xlevel Filling Station",
+ "name": "Fuel Tank Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

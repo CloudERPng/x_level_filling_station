@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include xlevel_filling_station *.css
+recursive-include xlevel_filling_station *.csv
+recursive-include xlevel_filling_station *.html
+recursive-include xlevel_filling_station *.ico
+recursive-include xlevel_filling_station *.js
+recursive-include xlevel_filling_station *.json
+recursive-include xlevel_filling_station *.md
+recursive-include xlevel_filling_station *.png
+recursive-include xlevel_filling_station *.py
+recursive-include xlevel_filling_station *.svg
+recursive-include xlevel_filling_station *.txt
+recursive-exclude xlevel_filling_station *.pyc

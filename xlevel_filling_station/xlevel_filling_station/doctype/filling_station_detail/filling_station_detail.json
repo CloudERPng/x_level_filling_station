@@ -1,0 +1,66 @@
+{
+ "creation": "2020-12-11 18:01:48.511018",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meter",
+  "item_code",
+  "item_name",
+  "qty",
+  "rate"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "meter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Meter",
+   "options": "Meter",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rate",
+   "read_only": 1
+  },
+  {
+   "columns": 3,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-12-16 17:51:59.043852",
+ "modified_by": "Administrator",
+ "module": "Xlevel Filling Station",
+ "name": "Filling Station Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

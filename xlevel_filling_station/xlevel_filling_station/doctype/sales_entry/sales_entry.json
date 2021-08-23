@@ -1,0 +1,172 @@
+{
+ "autoname": "format:SE-{MM}-{DD}-{#####}",
+ "creation": "2020-12-14 13:34:14.446710",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "filling_station",
+  "status",
+  "column_break_2",
+  "posting_date",
+  "company",
+  "section_break_2",
+  "meter_readings",
+  "section_break_4",
+  "fuel_tank_detail",
+  "section_break_10",
+  "mode_of_payment",
+  "total_sales_revenue",
+  "total_actual_revenue",
+  "reference_section",
+  "sales_invoice",
+  "column_break_16",
+  "stock_reconciliation",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sales Entry",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "filling_station",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Filling Station",
+   "options": "Filling Station",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nTo Bill\nCompleted\nCanceled",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Data",
+   "label": "Sales Invoice",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "fuel_tank_detail",
+   "fieldtype": "Table",
+   "label": "Fuel Tank Detail",
+   "no_copy": 1,
+   "options": "Fuel Tank Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Table",
+   "label": "Mode Of Payment",
+   "no_copy": 1,
+   "options": "Mode Of Payment SE",
+   "read_only": 1
+  },
+  {
+   "fieldname": "meter_readings",
+   "fieldtype": "Table",
+   "label": "Meter Readings",
+   "no_copy": 1,
+   "options": "Sales Entry Detail",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_sales_revenue",
+   "fieldtype": "Currency",
+   "label": "Total Sales Revenue",
+   "no_copy": 1,
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_actual_revenue",
+   "fieldtype": "Currency",
+   "label": "Total Actual Revenue",
+   "no_copy": 1,
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "stock_reconciliation",
+   "fieldtype": "Data",
+   "label": "Stock Reconciliation",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-12-25 05:32:11.952515",
+ "modified_by": "Administrator",
+ "module": "Xlevel Filling Station",
+ "name": "Sales Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

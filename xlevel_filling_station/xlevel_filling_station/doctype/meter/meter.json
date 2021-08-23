@@ -1,0 +1,108 @@
+{
+ "autoname": "format:M-{meter_id}",
+ "creation": "2020-12-11 17:58:07.880614",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meter_id",
+  "column_break_2",
+  "qty",
+  "section_break_4",
+  "item_code",
+  "item_name",
+  "column_break_6",
+  "filling_station",
+  "fuel_tank"
+ ],
+ "fields": [
+  {
+   "fetch_from": "fuel_tank.filling_station",
+   "fetch_if_empty": 1,
+   "fieldname": "filling_station",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Filling Station",
+   "options": "Filling Station",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Current Meter Reading Qty",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "meter_id",
+   "fieldtype": "Data",
+   "label": "Meter ID",
+   "no_copy": 1,
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "depends_on": "eval: doc.filling_station;",
+   "fieldname": "fuel_tank",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fuel Tank",
+   "options": "Fuel Tank",
+   "reqd": 1
+  }
+ ],
+ "modified": "2020-12-25 03:04:26.625775",
+ "modified_by": "Administrator",
+ "module": "Xlevel Filling Station",
+ "name": "Meter",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "item_code, filling_station",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "item_code",
+ "track_changes": 1
+}
