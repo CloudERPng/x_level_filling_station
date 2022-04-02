@@ -139,6 +139,7 @@ class SalesEntry(Document):
 		filling_station_doc = frappe.get_doc('Filling Station', self.filling_station)
 		meta = frappe.get_meta("Filling Station")
 		doc = frappe.new_doc('Sales Invoice')
+		doc.posting_date = self.posting_date
 		doc.is_pos = 1
 		doc.update_stock = 1
 		doc.company = self.company
