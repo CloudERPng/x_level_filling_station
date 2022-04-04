@@ -139,6 +139,7 @@ class SalesEntry(Document):
 		filling_station_doc = frappe.get_doc('Filling Station', self.filling_station)
 		meta = frappe.get_meta("Filling Station")
 		doc = frappe.new_doc('Sales Invoice')
+		doc.set_posting_time = 1
 		doc.posting_date = self.posting_date
 		doc.is_pos = 1
 		doc.update_stock = 1
@@ -202,6 +203,7 @@ class SalesEntry(Document):
 			'sales_entry': self.name,
 			'posting_date': self.posting_date,
 			'purpose': 'Stock Reconciliation',
+			'set_posting_time': 1,
 			'expense_account': frappe.db.get_value('Company', self.company, 'stock_adjustment_account')
 		})
 
