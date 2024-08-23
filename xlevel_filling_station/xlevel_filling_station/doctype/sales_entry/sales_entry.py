@@ -30,7 +30,8 @@ class SalesEntry(Document):
 			status = frappe.db.get_value('Meter Reading',row.meter_reading ,'status')
 			if status == 'Completed':
 				frappe.throw(f'Row# {row.idx}:  Status of Meter Reading# {row.meter_reading} is set to Completed')
-
+				
+	@frappe.whitelist()
 	def fetch_meters(self):
 		qty_via_meter = {}
 		self.meter_readings = []
@@ -41,21 +42,23 @@ class SalesEntry(Document):
 		payments = {}
 		item_rate = {}
 		#Fetch all meter readings against selected filling station in current date
-		meter_readings = frappe.db.get_list('Meter Reading', {
+		meter_readings = frappe.get_all('Meter Reading', {
 			'filling_station': self.filling_station,
 			'posting_date': self.posting_date,
 			'company': self.company,
 			'status': 'To Sales Entry'
 		}, ['name', 'sales_revenue', 'total_actual_revenue'])
+
 		for meter in meter_readings:
 			# Sum total revenues
 			total_sales_revenue += meter.sales_revenue
 			total_actual_revenue += meter.total_actual_revenue
 
 			#populate meter reading table
-			meter_reading = frappe.db.get_list('Meter Reading Detail', {
+			meter_reading = frappe.get_all('Meter Reading Detail', {
 				'parent': meter.name,
 			}, ['name' ,'meter', 'qty', 'new_qty', 'rate', 'sales_revenue', 'actual_total_revenue'])
+
 			for row in meter_reading:
 				item_code, item_name = frappe.db.get_value('Meter', row.meter, ['item_code', 'item_name'])
 				item_rate[item_code] = row.rate

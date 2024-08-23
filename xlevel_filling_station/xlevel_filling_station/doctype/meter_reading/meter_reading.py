@@ -18,6 +18,7 @@ class MeterReading(Document):
 	def validate(self):
 		self.validate_revenue()
 
+	@frappe.whitelist()
 	def fetch_meters(self):
 		price_list = frappe.db.get_value(
 			'Filling Station', self.filling_station, 'price_list')
