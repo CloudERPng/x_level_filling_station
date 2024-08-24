@@ -84,7 +84,7 @@ class SalesEntry(Document):
 					qty_via_meter[item_code] += meter_qty
 
 			#populate mode of payment detail table
-			mode_of_payment = frappe.db.get_list('Mode of Payment Detail', {
+			mode_of_payment = frappe.get_all('Mode of Payment Detail', {
 				'parent': meter.name,
 			},['mode_of_payment', 'amount'])
 			
